@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @font-face {
@@ -226,14 +227,14 @@ select {
 }
 
 .hero h1 {
-    font-family: "Malvinas Sans", sans-serif;
-    font-size: clamp(4rem, 7vw, 7.4rem);
-    line-height: 0.92;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    color: #111;
-    max-width: 650px;
-    transform: rotate(-1deg);
+  font-family: "Bangers", sans-serif;
+  font-size: clamp(4rem, 7vw, 7.4rem);
+  line-height: 0.92;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #111;
+  max-width: 650px;
+  transform: rotate(-1deg);
 }
 
 .hero h1 span {
@@ -885,96 +886,174 @@ select {
 
 @media (max-width: 640px) {
 
-    .container {
-        width: min(90%, var(--container));
-    }
+  .hero-visual {
+    min-height: 360px;
+    margin-top: 10px;
+  }
 
-    .brand {
-        font-size: 1.7rem;
-    }
+  .hero-device {
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: none;
+  }
 
-    .hero-grid {
-        padding-top: 54px;
-    }
+  .hero-device-glow {
+    width: 280px;
+    height: 280px;
+    bottom: 5px;
+    filter: blur(38px);
+  }
 
-    .hero h1 {
-        font-size: clamp(3rem, 17vw, 4.8rem);
-    }
+  /* NOTEBOOK */
 
-    .hero-description {
-        font-size: 1rem;
-    }
+  .mock-laptop {
+    width: 92%;
+    margin-bottom: 26px;
+    z-index: 2;
+  }
 
-    .hero-actions {
-        flex-direction: column;
-    }
+  .mock-laptop-screen {
+    border-width: 6px;
+    border-radius: 14px 14px 8px 8px;
+  }
 
-    .btn {
-        width: 100%;
-    }
+  .mock-topbar {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 0.52rem;
+  }
 
-    .hero-visual {
-        min-height: 390px;
-    }
+  .mock-topbar strong {
+    font-size: 0.95rem;
+  }
 
-    .hero-message {
-        font-size: 1.55rem;
-        top: 8px;
-        right: 5%;
-    }
+  .mock-dashboard {
+    grid-template-columns: 68px 1fr;
+    min-height: 190px;
+  }
 
-    .device-placeholder {
-        min-height: 310px;
-    }
+  .mock-sidebar {
+    padding: 14px 7px;
+    gap: 13px;
+    font-size: 0.5rem;
+  }
 
-    .workflow,
-    .features,
-    .coach-section,
-    .athlete-section,
-    .cta-section {
-        padding: 80px 0;
-    }
+  .mock-content {
+    padding: 9px;
+  }
 
-    .workflow-grid,
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+  .mock-week {
+    padding: 10px;
+  }
 
-    .workflow-card,
-    .feature-card {
-        min-height: auto;
-    }
+  .mock-days {
+    gap: 4px;
+    margin-top: 8px;
+  }
 
-    .split-image {
-        min-height: 340px;
-    }
+  .mock-days span {
+    padding: 5px 2px;
+    font-size: 0.5rem;
+  }
 
-    .split-image img {
-        height: 340px;
-    }
+  .mock-workout {
+    margin-top: 9px;
+    padding: 10px;
+  }
 
-    .image-badge {
-        left: 18px;
-        right: auto;
-        bottom: 18px;
-    }
+  .mock-workout strong {
+    font-size: 0.72rem;
+  }
 
-    .athlete-badge {
-        left: auto;
-        right: 18px;
-    }
+  .mock-workout small {
+    font-size: 0.5rem;
+  }
 
-    .footer-grid {
-        min-height: 230px;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    }
+  .mock-athletes {
+    margin-top: 8px;
+    padding: 7px 9px;
+    font-size: 0.55rem;
+  }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 12px;
-    }
+  .mock-athletes strong {
+    font-size: 0.95rem;
+  }
+
+  .mock-laptop-base {
+    width: 106%;
+    margin-left: -3%;
+    height: 11px;
+  }
+
+  /* CELULAR */
+
+  .mock-phone {
+    width: 92px;
+    min-height: 190px;
+    right: 4%;
+    bottom: 8px;
+    z-index: 5;
+
+    padding: 13px 7px;
+    border-width: 5px;
+    border-radius: 20px;
+  }
+
+  .mock-phone-brand {
+    margin-bottom: 12px;
+    font-size: 0.82rem;
+  }
+
+  .mock-phone > strong {
+    font-size: 0.62rem;
+  }
+
+  .mock-phone-workout {
+    margin-top: 12px;
+    padding: 10px 3px;
+    font-size: 0.72rem;
+  }
+
+  .mock-phone small {
+    margin-top: 5px;
+    font-size: 0.46rem;
+  }
+
+  .mock-phone button {
+    margin-top: 12px;
+    padding: 6px;
+    font-size: 0.5rem;
+  }
+
+  /* RELOJ */
+
+  .mock-watch {
+    width: 62px;
+    height: 62px;
+    right: -3px;
+    bottom: 18px;
+    z-index: 6;
+
+    border-width: 7px;
+  }
+
+  .mock-watch span {
+    font-size: 0.42rem;
+  }
+
+  .mock-watch strong {
+    font-size: 0.52rem;
+  }
+
+  .mock-watch small {
+    font-size: 0.34rem;
+  }
 }
 
 /* =====================================================
