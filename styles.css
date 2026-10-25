@@ -1829,3 +1829,48 @@ select {
   }
 
 }
+/* Public landing update. Scoped to leave the privacy document unchanged. */
+.landing-refresh section[id] { scroll-margin-top: 110px; }
+.landing-refresh .hero { min-height: 710px; overflow: clip; }
+.landing-refresh .hero-grid { padding: 72px 0 82px; gap: 48px; }
+.landing-refresh .hero-kicker { display: block; margin-bottom: 15px; font-size: .72rem; }
+.landing-refresh .development-label { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; margin-bottom: 26px; border: 1px solid #cce4f3; border-radius: 999px; background: #eff8fe; color: #245d80; font-size: .68rem; font-weight: 600; }
+.landing-refresh .development-label > span { width: 6px; height: 6px; border-radius: 50%; background: var(--sky-dark); }
+.landing-refresh .hero h1 { font-size: clamp(4rem,6.6vw,6.8rem); }
+.landing-refresh .hero-description { font-size: 1.04rem; max-width: 520px; line-height: 1.85; margin-top: 24px; }
+.landing-refresh .profile-actions { margin-top: 28px; gap: 12px; }
+.landing-refresh .profile-actions .btn { gap: 28px; padding: 0 22px; min-height: 56px; font-size: .95rem; }
+.landing-refresh .profile-actions .btn-secondary { background: #fff; border: 1px solid #a9d2e9; color: var(--blue); }
+.landing-refresh .profile-access-note { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-top: 16px; color: #41627a; font-size: .69rem; line-height: 1.8; }
+.landing-refresh .hero-explore { display: inline-flex; align-items: center; gap: 9px; margin-top: 22px; font-size: .75rem; color: #4d6c80; }
+.landing-refresh .hero-explore:hover { color: var(--blue); text-decoration: underline; }
+.landing-refresh .hero-visual { display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+.landing-refresh .concept-label { display: block; width: fit-content; padding: 7px 10px; border: 1px solid #cce4f3; border-radius: 6px; font-size: .56rem; letter-spacing: .07em; font-weight: 700; color: #406983; background: #ffffffb8; position: relative; z-index: 4; }
+.landing-refresh .hero-device { width: 100%; }
+.landing-refresh .mock-athletes strong { font-size: .8rem; }
+.landing-refresh .mock-phone button:disabled { cursor: default; font-size: .55rem; opacity: 1; }
+.landing-refresh .landing-mini-blocks { display: flex; gap: 5px; margin-top: 10px; }
+.landing-refresh .landing-mini-blocks span { flex: 1; padding: 6px 2px; border-radius: 4px; background: #ffffffd9; color: #215e85; text-align: center; font-size: .53rem; font-weight: 700; border-bottom: 3px solid #7fbadf; }
+.landing-refresh .landing-mini-blocks span:first-child { border-bottom-color: #e8bc79; }
+.landing-refresh .landing-mini-blocks span:last-child { border-bottom-color: #80beb5; }
+.landing-refresh .workflow { padding-top: 80px; padding-bottom: 80px; }
+.landing-refresh .workflow-card, .landing-refresh .feature-card { border: 1px solid #dceaf3; box-shadow: 0 8px 28px #1d557009; }
+.landing-refresh .feature-card p { line-height: 1.85; }
+.landing-refresh .profile-model { display: inline-block; color: var(--blue); background: #e7f4fd; padding: 8px 13px; border: 1px solid #cbe4f4; border-radius: 999px; font-size: .76rem; font-weight: 700; margin: 0 0 18px; }
+.landing-refresh .profile-model-free { background: #ecf7f3; color: #2a7057; border-color: #cce7dc; }
+.landing-refresh .profile-benefits { list-style: none; display: grid; gap: 14px; padding: 0; margin: 8px 0 24px; }
+.landing-refresh .profile-benefits li { padding-left: 18px; position: relative; color: #546b7c; line-height: 1.8; font-size: .9rem; }
+.landing-refresh .profile-benefits li::before { content: ''; width: 6px; height: 6px; background: var(--sky-dark); position: absolute; left: 0; top: 10px; border-radius: 50%; }
+.landing-refresh .profile-benefits strong { color: var(--blue-dark); font-weight: 700; }
+.landing-refresh .split-content .profile-development { font-size: .74rem; line-height: 1.8; color: #536d80; padding-top: 14px; border-top: 1px solid #d8e7f0; }
+.landing-refresh .coach-card-small strong { font-size: 1.15rem; }
+.landing-refresh .image-badge span { font-size: .65rem; }
+.landing-refresh .garmin-card p { max-width: 780px; margin-left: auto; margin-right: auto; line-height: 1.85; }
+.landing-refresh a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 5px; }
+@media(max-width:1100px) { .landing-refresh .main-nav { gap: 16px; } .landing-refresh .main-nav a { font-size: .78rem; } .landing-refresh .site-header .btn { font-size: .72rem; min-height: 44px; padding: 0 15px; } }
+@media(max-width:900px) { .landing-refresh .hero { min-height: auto; } .landing-refresh .hero-grid { gap: 38px; padding: 48px 0 60px; } .landing-refresh .profile-access-note { justify-content: center; } .landing-refresh .hero-visual { min-height: 410px; gap: 18px; } .landing-refresh .hero-description { max-width: 590px; } .landing-refresh .profile-benefits { text-align: left; max-width: 580px; margin-left: auto; margin-right: auto; } }
+@media(max-width:640px) { .landing-refresh .hero-grid { padding: 36px 0 42px; gap: 32px; } .landing-refresh .hero h1 { font-size: clamp(3.9rem,14vw,5.5rem); } .landing-refresh .hero-kicker { font-size: .6rem; letter-spacing: .1em; } .landing-refresh .development-label { font-size: .62rem; margin-bottom: 24px; } .landing-refresh .hero-description { font-size: .92rem; line-height: 1.8; } .landing-refresh .profile-actions { flex-wrap: nowrap; gap: 9px; } .landing-refresh .profile-actions .btn { padding: 0 12px; gap: 12px; min-width: 0; min-height: 52px; font-size: .79rem; flex: 1; } .landing-refresh .profile-access-note { gap: 1px; flex-direction: column; font-size: .65rem; } .landing-refresh .profile-access-note > span[aria-hidden] { display: none; } .landing-refresh .hero-explore { font-size: .68rem; margin-top: 16px; } .landing-refresh .hero-visual { min-height: 335px; gap: 0; } .landing-refresh .concept-label { font-size: .47rem; padding: 6px; margin-bottom: 12px; } .landing-refresh .landing-mini-blocks { gap: 2px; margin-top: 6px; } .landing-refresh .landing-mini-blocks span { padding: 3px 1px; font-size: .35rem; border-bottom-width: 2px; } .landing-refresh .mock-athletes strong { font-size: .57rem; } .landing-refresh .mock-phone button:disabled { font-size: .36rem; } .landing-refresh .coach-card-small strong { font-size: .9rem; } .landing-refresh .profile-benefits li { font-size: .84rem; } .landing-refresh .image-badge span { font-size: .57rem; } .landing-refresh section[id] { scroll-margin-top: 92px; } }
+@media(prefers-reduced-motion:reduce) { html:has(.landing-refresh) { scroll-behavior: auto; } .landing-refresh *, .landing-refresh *::before, .landing-refresh *::after { transition: none; animation: none; } }.landing-refresh .hero-content { min-width: 0; width: 100%; max-width: 670px; }
+@media(max-width:640px) { .landing-refresh .hero h1 { font-size: clamp(3.15rem,14vw,5.5rem); } }
+@media(max-width:380px) { .landing-refresh .profile-actions .btn { font-size: .72rem; gap: 7px; padding: 0 10px; white-space: nowrap; } .landing-refresh .site-header .btn { font-size: .64rem; padding: 0 12px; min-height: 42px; } }@media(max-width:900px) { .landing-refresh .hero-grid { grid-template-columns: minmax(0,1fr); } .landing-refresh .hero-visual { min-width: 0; max-width: 100%; } }
+@media(max-width:640px) { .landing-refresh .workflow-grid, .landing-refresh .features-grid { grid-template-columns: minmax(0,1fr); } .landing-refresh .workflow-card, .landing-refresh .feature-card { min-width: 0; padding: 26px; } .landing-refresh .hero-device { max-width: 100%; } }
