@@ -1874,3 +1874,66 @@ select {
 @media(max-width:640px) { .landing-refresh .hero h1 { font-size: clamp(3.15rem,14vw,5.5rem); } }
 @media(max-width:380px) { .landing-refresh .profile-actions .btn { font-size: .72rem; gap: 7px; padding: 0 10px; white-space: nowrap; } .landing-refresh .site-header .btn { font-size: .64rem; padding: 0 12px; min-height: 42px; } }@media(max-width:900px) { .landing-refresh .hero-grid { grid-template-columns: minmax(0,1fr); } .landing-refresh .hero-visual { min-width: 0; max-width: 100%; } }
 @media(max-width:640px) { .landing-refresh .workflow-grid, .landing-refresh .features-grid { grid-template-columns: minmax(0,1fr); } .landing-refresh .workflow-card, .landing-refresh .feature-card { min-width: 0; padding: 26px; } .landing-refresh .hero-device { max-width: 100%; } }
+/* Landing theme tokens. Light defaults preserve the approved palette. */
+:root {
+  --landing-page: #ffffff; --landing-surface: #ffffff; --landing-soft: #f7fbfe;
+  --landing-ink: #17212b; --landing-muted: #5d6b78; --landing-accent: #0f5f98;
+  --landing-line: #cce4f3; --landing-header: rgba(255,255,255,.92);
+  --landing-hover: #e7f4fd; --landing-button-ink: #ffffff;
+  --landing-hero: radial-gradient(circle at 80% 20%,rgba(122,194,236,.34),transparent 34%),linear-gradient(120deg,#ffffff 0%,#f8fcff 48%,#dff3ff 100%);
+  --landing-card-gradient: linear-gradient(145deg,#ffffff,#f7fcff);
+  --landing-visual: linear-gradient(145deg,#dff3ff,#5fb4e4);
+  --landing-band: linear-gradient(135deg,#08324f,#0f5f98);
+  --landing-device-border: #17212b; --landing-shadow: 0 18px 50px rgba(26,99,145,.1);
+}
+:root[data-theme="dark"] {
+  --landing-page: #0b1422; --landing-surface: #142235; --landing-soft: #101d2e;
+  --landing-ink: #e6eff8; --landing-muted: #b0c5d7; --landing-accent: #84cdf7;
+  --landing-line: #30485e; --landing-header: rgba(11,20,34,.95);
+  --landing-hover: #203b53; --landing-button-ink: #082235;
+  --landing-hero: radial-gradient(circle at 80% 20%,rgba(45,143,203,.16),transparent 40%),linear-gradient(120deg,#0b1422,#101f32);
+  --landing-card-gradient: linear-gradient(145deg,#142235,#172b40);
+  --landing-visual: linear-gradient(145deg,#183b55,#102438);
+  --landing-band: linear-gradient(135deg,#0d2035,#123752);
+  --landing-device-border: #30475b; --landing-shadow: 0 18px 50px rgba(0,0,0,.25);
+  --text: var(--landing-ink); --muted: var(--landing-muted); --sky-soft: #19364d;
+  --sky-dark: #84cdf7; --border: var(--landing-line);
+  --shadow-soft: var(--landing-shadow); --shadow-card: 0 14px 35px rgba(0,0,0,.2);
+}
+.landing-refresh .header-actions { display: flex; align-items: center; gap: 14px; }
+.landing-refresh .landing-theme-toggle { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; gap: 4px; min-width: 74px; min-height: 42px; padding: 4px; border: 1px solid var(--landing-line); border-radius: 999px; background: var(--landing-soft); color: var(--landing-muted); cursor: pointer; }
+.landing-refresh .landing-theme-toggle[hidden] { display: none; }
+.landing-refresh .landing-theme-toggle svg { box-sizing: content-box; padding: 6px; border-radius: 50%; }
+:root:not([data-theme="dark"]) .landing-refresh .theme-sun, :root[data-theme="dark"] .landing-refresh .theme-moon { color: var(--landing-accent); background: var(--landing-surface); box-shadow: 0 1px 5px #00000012; }
+.landing-refresh .landing-theme-toggle:hover { border-color: var(--landing-accent); }
+.landing-refresh .landing-theme-toggle:focus-visible { outline: 3px solid var(--landing-accent); outline-offset: 4px; }
+:root[data-theme="dark"] .landing-refresh { color: var(--landing-ink); background: var(--landing-page); }
+:root[data-theme="dark"] .landing-refresh .site-header { background: var(--landing-header); border-color: var(--landing-line); }
+:root[data-theme="dark"] .landing-refresh :is(.brand,.main-nav a,.hero h1,.hero-message) { color: var(--landing-ink); }
+:root[data-theme="dark"] .landing-refresh :is(.main-nav a:hover,.hero h1 span) { color: var(--landing-accent); }
+:root[data-theme="dark"] .landing-refresh .hero { background: var(--landing-hero); }
+:root[data-theme="dark"] .landing-refresh :is(.workflow,.mock-dashboard) { background: var(--landing-soft); }
+:root[data-theme="dark"] .landing-refresh :is(.features,.athlete-section) { background: var(--landing-page); }
+:root[data-theme="dark"] .landing-refresh .coach-section { background: linear-gradient(120deg,var(--landing-soft),var(--landing-page)); }
+:root[data-theme="dark"] .landing-refresh :is(.workflow-card,.feature-card) { background: var(--landing-card-gradient); border-color: var(--landing-line); box-shadow: var(--landing-shadow); }
+:root[data-theme="dark"] .landing-refresh :is(.btn-primary,.mock-phone button) { background: linear-gradient(135deg,#84cdf7,#54afe2); color: var(--landing-button-ink); }
+:root[data-theme="dark"] .landing-refresh :is(.btn-secondary,.profile-actions .btn-secondary,.btn-light) { color: var(--landing-accent); background: var(--landing-surface); border-color: var(--landing-line); }
+:root[data-theme="dark"] .landing-refresh .btn-secondary:hover { background: var(--landing-hover); }
+:root[data-theme="dark"] .landing-refresh :is(.development-label,.concept-label,.profile-model) { color: var(--landing-accent); background: var(--landing-soft); border-color: var(--landing-line); }
+:root[data-theme="dark"] .landing-refresh .profile-model-free { color: #a5dfc5; background: #17352d; border-color: #305747; }
+:root[data-theme="dark"] .landing-refresh :is(.profile-access-note,.hero-explore,.profile-benefits li,.split-content .profile-development) { color: var(--landing-muted); border-color: var(--landing-line); }
+:root[data-theme="dark"] .landing-refresh :is(.hero-explore:hover,.profile-benefits strong) { color: var(--landing-accent); }
+:root[data-theme="dark"] .landing-refresh :is(.coach-visual,.athlete-visual) { background: var(--landing-visual); }
+:root[data-theme="dark"] .landing-refresh :is(.coach-card,.athlete-plan-card,.image-badge,.mock-topbar,.mock-week,.mock-athletes,.mock-phone) { background: var(--landing-surface); color: var(--landing-ink); }
+:root[data-theme="dark"] .landing-refresh :is(.coach-card-main strong,.athlete-plan-card strong) { color: var(--landing-ink); }
+:root[data-theme="dark"] .landing-refresh :is(.coach-card-main p,.coach-card-small span,.athlete-plan-card p,.athlete-plan-card small,.mock-phone small,.mock-athletes) { color: var(--landing-muted); }
+:root[data-theme="dark"] .landing-refresh :is(.coach-card-small strong,.visual-label,.mock-athletes strong,.mock-phone-brand,.image-badge strong) { color: var(--landing-accent); }
+:root[data-theme="dark"] .landing-refresh :is(.mock-sidebar,.mock-days span,.mock-phone-workout) { background: var(--landing-hover); color: var(--landing-accent); }
+:root[data-theme="dark"] .landing-refresh .mock-laptop-screen { background: var(--landing-device-border); border-color: var(--landing-device-border); }
+:root[data-theme="dark"] .landing-refresh .mock-phone { border-color: var(--landing-device-border); }
+:root[data-theme="dark"] .landing-refresh .landing-mini-blocks span { color: var(--landing-ink); background: var(--landing-hover); }
+:root[data-theme="dark"] .landing-refresh :is(.garmin-preview,.cta-section) { background: var(--landing-band); }
+:root[data-theme="dark"] .landing-refresh .site-footer { background: var(--landing-page); border-top: 1px solid var(--landing-line); }
+:root[data-theme="dark"] .landing-refresh a:focus-visible { outline-color: var(--landing-accent); }
+@media(max-width:1200px) { .landing-refresh .nav-wrapper { gap: 16px; } .landing-refresh .main-nav { gap: 12px; } .landing-refresh .main-nav a { font-size: .75rem; } .landing-refresh .header-actions { gap: 10px; } .landing-refresh .header-actions > .btn { font-size: .7rem; padding: 0 14px; } }
+@media(max-width:480px) { .landing-refresh .nav-wrapper { gap: 10px; } .landing-refresh .header-actions { gap: 8px; } .landing-refresh .header-actions > .btn { max-width: 120px; min-height: 40px; font-size: .6rem; padding: 0 10px; } .landing-refresh .brand { font-size: 1.7rem; } .landing-refresh .landing-theme-toggle { min-width: 64px; min-height: 40px; gap: 0; padding: 3px; } .landing-refresh .landing-theme-toggle svg { width: 16px; height: 16px; padding: 6px; } }
